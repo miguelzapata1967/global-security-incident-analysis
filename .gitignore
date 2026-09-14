@@ -1,0 +1,11 @@
+
+target/
+dbt_packages/
+logs/
+.env
+
+# Snowflake credentials and private keys
+*.p8
+*.pem
+*.key
+*.pub
