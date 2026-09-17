@@ -9,3 +9,4 @@ logs/
 *.pem
 *.key
 *.pub
+dbt_internal_packages/

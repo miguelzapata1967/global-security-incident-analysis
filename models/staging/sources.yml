@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: gtd_security
+    database: GTD_SECURITY
+    schema: RAW
+    tables:
+      - name: gtd_raw
