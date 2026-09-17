@@ -2,20 +2,14 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+  - name: stg_gtd_events
+    description: "Staging model for Global Terrorism Database event and location data."
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+  - name: stg_gtd_attacks
+    description: "Staging model for GTD attack type and attack characteristic data."
+
+  - name: stg_gtd_casualties
+    description: "Staging model for GTD casualty measures, including fatalities and wounded."
+
+  - name: stg_gtd_security
+    description: "Staging model for security-relevant GTD incident information."
