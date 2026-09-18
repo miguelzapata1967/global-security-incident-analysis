@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_gtd_incidents
+    description: "Intermediate model containing one row per firearm-related GTD incident."
+
+    columns:
+      - name: EVENTID
+        description: "Unique identifier for each GTD incident."
+        tests:
+          - not_null
+          - unique
+
+      - name: TOTAL_CASUALTIES
+        description: "Total reported casualties for the incident."
+        tests:
+          - not_null
+
+      - name: SEVERITY_CATEGORY
+        description: "Severity category based on total casualties."
+        tests:
+          - not_null
+
+      - name: TARGET_ENVIRONMENT
+        description: "Security-oriented classification of the incident target environment."
+        tests:
+          - not_null
