@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: mart_target_environment
+    description: "Reporting mart containing incident counts by security-oriented target environment."
+
+    columns:
+      - name: TARGET_ENVIRONMENT
+        description: "Security-oriented classification of the incident target environment."
+        tests:
+          - not_null
+          - unique
+
+      - name: INCIDENT_COUNT
+        description: "Number of incidents within each target environment."
+        tests:
+          - not_null
+
+  - name: mart_security_severity
+    description: "Reporting mart containing incident counts and casualty measures by security-oriented target environment."
+
+    columns:
+      - name: TARGET_ENVIRONMENT
+        description: "Security-oriented classification of the incident target environment."
+        tests:
+          - not_null
+          - unique
+
+      - name: INCIDENT_COUNT
+        description: "Number of incidents within each target environment."
+        tests:
+          - not_null
+
+      - name: TOTAL_FATALITIES
+        description: "Total fatalities within each target environment."
+        tests:
+          - not_null
+
+      - name: TOTAL_INJURIES
+        description: "Total injuries within each target environment."
+        tests:
+          - not_null
+
+      - name: TOTAL_CASUALTIES
+        description: "Total casualties within each target environment."
+        tests:
+          - not_null
+
+      - name: AVG_CASUALTIES_PER_INCIDENT
+        description: "Average casualties per incident within each target environment."
+        tests:
+          - not_null
