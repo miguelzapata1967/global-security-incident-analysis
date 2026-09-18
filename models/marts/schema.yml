@@ -50,3 +50,22 @@ models:
         description: "Average casualties per incident within each target environment."
         tests:
           - not_null
+
+  - name: mart_severity_by_environment
+    description: "Reporting mart containing incident counts by security-oriented target environment and severity category."
+
+    columns:
+      - name: TARGET_ENVIRONMENT
+        description: "Security-oriented classification of the incident target environment."
+        tests:
+          - not_null
+
+      - name: SEVERITY_CATEGORY
+        description: "Severity category based on total casualties."
+        tests:
+          - not_null
+
+      - name: INCIDENT_COUNT
+        description: "Number of incidents within each target environment and severity category."
+        tests:
+          - not_null
