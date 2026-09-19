@@ -424,6 +424,15 @@ This project demonstrates practical application of:
 - Security-focused data analysis
 
 ---
+## Power BI Dashboard
+
+The project includes an interactive Power BI dashboard analyzing incident trends, severity, casualties, target environments, countries, weapons, and attack methods.
+
+### Dashboard Preview
+
+[View Power BI Dashboard PDF](docs/Dopmestic and Global violent events.pdf)
+
+The PDF provides a static view of the Power BI analysis for portfolio and review purposes.
 
 ## Career Connection
 
