@@ -268,4 +268,4 @@ During the data-quality review of the Global Terrorism Database (GTD), **35 inci
 ### Separation of Analytical and Technical Documentation
 
 This document focuses on the analytical interpretation and security perspective of the project—what the data represents, what can be concluded from the available information, and how limitations affect the interpretation of the results. 
-The technical implementation, including data profiling, NULL and missing-value handling, transformations, dbt models, data-quality testing, Snowflake processing, and the Python-to-Snowflake-to-dbt-to-Power BI workflow, is documented separately in README_TECH.md.
+The technical implementation, including data profiling, NULL and missing-value handling, transformations, dbt models, data-quality testing, Snowflake processing, and the Python-to-Snowflake-to-dbt-to-Power BI workflow, is documented separately in readme_tech.md.
