@@ -153,7 +153,7 @@ Tests included validation of:
 ## Power BI Dashboard
 
 The completed Power BI dashboard contains four analytical pages.
-GitHub: https://github.com/miguelzapata1967  "...DOCS \ "Domestic and Global violent events.pdf"
+GitHub: https://github.com/miguelzapata1967  "...docs \ "Domestic and Global violent events.pdf"
 
 ### 1. Summary Trends
 
