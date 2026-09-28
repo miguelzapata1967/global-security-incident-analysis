@@ -1,271 +1,848 @@
 # Mass Shooting Incident Severity and Physical Security Analysis
 
-## Project Overview
 
-This portfolio project analyzes firearm-related security incidents using the **Global Terrorism Database (GTD)** for **January–June 2021**.
 
-The analysis focuses on incident frequency, severity, casualties, target environments, countries, weapons, and attack methods from a physical-security perspective.
+## Analytical Findings
 
 
-## Security Analysis Perspective
 
-This project approaches incident data from a **physical-security and public-safety analysis perspective**.
+This document contains the analytical findings from the Global and Domestic Violent Events project.
 
-Instead of simply counting incidents, the analysis organizes events by:
 
-- Severity
-- Casualties
-- Target environment
-- Country
-- Weapon type
-- Attack method
-- Month
 
-This demonstrates how raw incident data can be transformed into structured information for security-focused situational awareness and reporting.
+The objective was not simply to count incidents. The analysis examined firearm-related violence through a physical-security and investigative perspective, including attack type, target environment, casualty severity, weapon type, geographic distribution, and data-quality limitations.
 
----
 
-## Limitations
 
-Several limitations should be considered when interpreting the results:
+The technical implementation is documented separately in \[`readme\_tech.md`](readme\_tech.md).
 
-1. **Limited time period**
 
-   The current GTD analysis covers January–June 2021 only.
 
-2. **Source definitions**
+\---
 
-   GTD and FBI classifications and definitions determine how incidents, targets, weapons, casualties, and other attributes are categorized. These definitions may differ between datasets.
 
-3. **Geographic information**
 
-   Geographic fields may vary in completeness or precision.
+## 1. Global Dataset Overview
 
-4. **Descriptive analysis**
 
-   This project describes patterns in the available data. It does not establish causation or predict future incidents.
 
-5. **Dataset scope**
+The Global Terrorism Database (GTD) dataset analyzed for this project contained:
 
-   Results reflect the records and classifications available in the selected datasets and should not be interpreted as a complete representation of all security incidents.
 
 
----
+\*\*4,960 incidents\*\*
 
-## Storytelling and Analytical Perspective
 
-An important part of this project is understanding the differences between the two data sources: the **Global Terrorism Database (GTD)** and the **FBI mass-shooting dataset**.
 
-The GTD is a global terrorism and security database that includes incidents occurring in the United States, while the FBI dataset focuses specifically on mass-shooting incidents in the United States.
+The analysis first examined the overall distribution of attack types, targets, and weapons before narrowing the analytical scope to firearm-related incidents.
 
-One observation from comparing the sources is that the GTD contains more U.S. incidents within the available data than the FBI dataset. **This comparison is not intended to determine that one database is better than the other.** Instead, it highlights the importance of understanding how different datasets define and collect information.
 
-The two sources provide different perspectives because they may differ in:
 
-- Incident definitions
-- Time coverage
-- Inclusion criteria
-- Target types
-- Attack methods
-- Weapon classifications
-- Casualty measurements
-- Geographic coverage
-- Incident categorization
+\---
 
-Both datasets contain **overlapping categories of information**, such as incident dates, locations, targets, weapons, and casualties. However, the definitions and collection methodologies can differ. Understanding these differences is important before comparing or combining the data.
 
-For this phase of the project, the GTD provides a broader dataset with worldwide coverage, even though the available file currently covers only **January through June 2021**. The FBI dataset provides an additional U.S.-focused perspective for comparison.
 
-### From Incident Investigation to Data Analysis
+## 2. Attack Types
 
-My background in **law enforcement and physical security** has taught me to look beyond the initial incident report and ask:
 
-- What happened?
-- Where did it happen?
-- Who or what was affected?
-- How severe was the incident?
-- What factors contributed to the outcome?
-- What patterns can be identified across incidents?
 
-This project applies that investigative mindset to structured data.
+The most frequently recorded attack types were:
 
-Instead of looking at an individual incident in isolation, the analysis uses data to identify patterns in **incident severity, targets, locations, weapons, attack methods, casualties, and physical security environments**.
 
-The analytical process follows the same basic mindset:
 
-**Investigate → Structure the Data → Validate → Identify Patterns → Analyze → Communicate**
+| Attack Type | Incidents |
 
-This approach connects my previous experience in investigations and physical security with my developing skills in **data analytics and data engineering**.
-
----
-
-
-**Analysis period:**
-
-
-**January–June 2021**
-
-Initial dataset:
-
-- **4,960 records**
-- **135 columns**
-- Approximately **17.31 MB**
-- No duplicate rows identified during initial inspection
-
-The analytical workflow focuses on firearm-related incidents within the selected GTD dataset.
-
-### FBI Mass-Shooting Dataset
-
-The FBI dataset provides a second, U.S.-focused perspective for the project.
-
-It will be used to examine how a U.S.-focused mass-shooting dataset compares with the broader GTD data.
-
-The comparison will focus on differences and similarities in areas such as:
-
-- Incident definitions
-- Time coverage
-- Inclusion criteria
-- Target types
-- Attack methods
-- Weapon classifications
-- Casualties
-- Geographic coverage
-- Incident categorization
-
-The two datasets will not be treated as directly interchangeable. Their definitions and collection methodologies will be examined before making comparisons or combining analytical results.
-
----
-
-Tests included validation of:
-
-- Event ID uniqueness
-- Required event IDs
-- Required target environments
-- Required severity categories
-- Casualty fields
-- Incident counts
-- Average casualties
-- Fatalities
-- Injuries
-
----
-
-## Power BI Dashboard
-
-The completed Power BI dashboard contains four analytical pages.
-GitHub: https://github.com/miguelzapata1967  "...docs \ "Domestic and Global violent events.pdf"
-
-### 1. Summary Trends
-
-Provides an overview of incident activity and casualties.
-
-Key visuals:
-
-- Total Incidents
-- Total Fatalities
-- Total Wounded
-- Incidents by Month
-- Incidents by Severity
-- Severity by Environment
-
-### 2. Security by Target
-
-Examines incidents by target environment.
-
-Key visuals:
-
-- Incidents by Target Environment
-- Incidents by Severity
-- Total Casualties
-
-### 3. Security by Country
-
-Provides country-level analysis.
-
-Key visuals:
-
-- Incidents by Country
-- Fatalities by Country
-- Selected Country — Incident Count
-
-### 4. Weapons & Attack Methods
-
-Examines weapons and attack methods associated with incidents.
-
-Key visuals:
-
-- Incidents by Weapon Type
-- Incidents by Attack Type
-- Casualties by Severity
-- Total Wounded
-
----
-
-## Key Findings
-
-### Firearm-Related Incidents
-
-The analysis identified:
-
-**1,718 firearm-related incidents**
-
-Monthly incident counts were:
-
-| Month | Incidents |
 |---|---:|
-| January | 243 |
-| February | 231 |
-| March | 238 |
-| April | 321 |
-| May | 340 |
-| June | 345 |
-| **Total** | **1,718** |
 
-The descriptive results show higher incident counts during the later months of the January–June period.
+| Bombing / Explosion | 1,828 |
 
-### Security-Relevant Incidents
+| Armed Assault | 1,292 |
 
-The analysis identified **1,629 security-relevant firearm incidents** based on the project's target-environment classification.
+| Unknown | 603 |
 
-Major target environments included:
+| Assassination | 450 |
 
-| Target Environment | Incidents |
+| Kidnapping | 448 |
+
+| Facility / Infrastructure Attack | 281 |
+
+| Barricade Incident | 16 |
+
+| Hijacking | 14 |
+
+
+
+Bombing/explosion and armed assault represented the largest attack categories in the dataset.
+
+
+
+However, because this project focuses heavily on mass-shooting and physical-security considerations, the analysis was subsequently narrowed to incidents involving firearms.
+
+
+
+\---
+
+
+
+## 3. Target Types
+
+
+
+The most frequently recorded target categories in the complete dataset included:
+
+
+
+| Target Type | Incidents |
+
 |---|---:|
-| Private Citizens & Property | 628 |
+
+| Private Citizens \& Property | 1,502 |
+
+| Military | 1,161 |
+
+| Police | 668 |
+
+| Government (General) | 527 |
+
+| Business | 243 |
+
+| Unknown | 177 |
+
+| Terrorists / Non-State Militia | 145 |
+
+| Utilities | 96 |
+
+| Religious Institutions | 84 |
+
+| Education | 75 |
+
+| Transportation | 68 |
+
+| Journalists \& Media | 49 |
+
+| Diplomatic | 36 |
+
+| Telecommunications | 33 |
+
+| NGO | 30 |
+
+| Violent Political Party | 25 |
+
+| Airports | 21 |
+
+| Maritime | 8 |
+
+| Other | 7 |
+
+| Food / Water Supply | 4 |
+
+| Tourists | 1 |
+
+
+
+Private citizens/property, military, police, and government targets represented a substantial portion of documented incidents.
+
+
+
+\---
+
+
+
+## 4. Weapon Categories
+
+
+
+The weapon distribution showed:
+
+
+
+| Weapon Type | Incidents |
+
+|---|---:|
+
+| Explosives | 2,089 |
+
+| Firearms | 1,718 |
+
+| Unknown | 775 |
+
+| Incendiary | 259 |
+
+| Melee | 97 |
+
+| Vehicle | 9 |
+
+| Sabotage Equipment | 7 |
+
+| Chemical | 4 |
+
+| Other | 2 |
+
+
+
+Firearms were the second most frequently recorded weapon category, with:
+
+
+
+\*\*1,718 firearm-related incidents\*\*
+
+
+
+These incidents became a primary analytical subset for the project.
+
+
+
+\---
+
+
+
+# Firearm Incident Analysis
+
+
+
+## 5. Firearm Incidents by Attack Type
+
+
+
+Among the 1,718 firearm incidents:
+
+
+
+| Attack Type | Incidents |
+
+|---|---:|
+
+| Armed Assault | 1,114 |
+
+| Assassination | 276 |
+
+| Kidnapping | 252 |
+
+| Facility / Infrastructure Attack | 53 |
+
+| Hijacking | 12 |
+
+| Barricade Incident | 11 |
+
+
+
+Armed assault represented the dominant attack type among firearm-related incidents.
+
+
+
+\---
+
+
+
+## 6. Firearm Incidents by Target
+
+
+
+The firearm subset showed the following target distribution:
+
+
+
+| Target Type | Incidents |
+
+|---|---:|
+
+| Private Citizens \& Property | 628 |
+
 | Military | 297 |
+
 | Police | 258 |
+
 | Government (General) | 257 |
+
 | Business | 80 |
-| Religious Figures/Institutions | 28 |
-| Educational Institution | 23 |
+
+| Terrorists / Non-State Militia | 49 |
+
+| Religious Institutions | 28 |
+
+| Journalists \& Media | 26 |
+
+| Education | 23 |
+
 | NGO | 18 |
+
 | Transportation | 16 |
-| Government (Diplomatic) | 14 |
 
-These results provide a descriptive view of the types of environments represented in the dataset.
+| Diplomatic | 14 |
+
+| Violent Political Party | 11 |
+
+| Utilities | 4 |
+
+| Airports | 2 |
+
+| Maritime | 2 |
+
+| Telecommunications | 2 |
+
+| Other | 1 |
+
+| Tourists | 1 |
+
+| Food / Water Supply | 1 |
 
 
-### Handling Null and Missing Data
 
-Null and missing values were reviewed during the initial data-profiling process.
+The largest firearm target category was \*\*Private Citizens \& Property\*\*, followed by Military, Police, and Government targets.
 
-Not all null values represent data-quality errors. In incident datasets, a field may be blank because the information was **not reported, not applicable, or not available in the source data**.
 
-The analysis therefore distinguishes between:
 
-- Missing information that is expected within the source dataset
-- Fields that are required for the analytical model
-- Values that could affect calculations or classifications
+This distribution demonstrates why target environment is important when analyzing violent incidents from a physical-security perspective.
 
-Null-value checks were performed before transformation so that missing information could be identified and handled appropriately without automatically treating every null as an error.
 
-This is an important part of the data-quality process because **clean data does not necessarily mean removing every null value**. The goal is to understand what the missing value represents and determine whether it affects the analysis.
 
-### Geographic Data Limitations and Missing Coordinates
+\---
 
-During the data-quality review of the Global Terrorism Database (GTD), **35 incident records were identified with missing latitude and/or longitude values**. These records remain valid incident records and were **not removed from the analytical dataset simply because geographic coordinates were unavailable**. The missing coordinates represent a limitation in the source data rather than evidence that the incidents did not occur or that the records were invalid. Because latitude and longitude are required to plot an incident on a geographic map, these 35 records cannot be accurately displayed as individual locations in the Power BI map visual. However, they remain available for other analyses, including incident counts, severity, casualties, target characteristics, and other non-geographic dimensions. This distinction is important because excluding these incidents solely for visualization could understate the overall number of incidents and potentially bias other analytical results. Therefore, the project preserves these records in the dataset while treating their geographic fields as missing and documenting the limitation. Geographic visualizations should consequently be interpreted as representing **only incidents with usable geographic coordinates**, rather than the complete population of incidents in the dataset.
 
-### Separation of Analytical and Technical Documentation
 
-This document focuses on the analytical interpretation and security perspective of the project—what the data represents, what can be concluded from the available information, and how limitations affect the interpretation of the results. 
-The technical implementation, including data profiling, NULL and missing-value handling, transformations, dbt models, data-quality testing, Snowflake processing, and the Python-to-Snowflake-to-dbt-to-Power BI workflow, is documented separately in readme_tech.md.
+# Casualty Analysis
+
+
+
+## 7. Casualties per Firearm Incident
+
+
+
+For firearm incidents, total casualties per incident showed the following distribution:
+
+
+
+| Statistic | Casualties |
+
+|---|---:|
+
+| Mean | 3.95 |
+
+| Median | 1 |
+
+| 75th Percentile | 4 |
+
+| Maximum | 104 |
+
+
+
+The difference between the mean and median indicates that the casualty distribution is influenced by a smaller number of incidents producing substantially higher casualty totals.
+
+
+
+Therefore, incident count alone does not fully describe incident severity.
+
+
+
+\---
+
+
+
+## 8. Casualty Thresholds
+
+
+
+Among the 1,718 firearm incidents:
+
+
+
+| Threshold | Incidents |
+
+|---|---:|
+
+| At least 1 casualty | 1,370 |
+
+| At least 1 death | 1,215 |
+
+| At least 5 deaths | 284 |
+
+| At least 10 deaths | 122 |
+
+
+
+These thresholds demonstrate the importance of separating incident frequency from incident consequences.
+
+
+
+An environment may experience relatively fewer incidents but still face significant security exposure if those incidents produce high casualty levels.
+
+
+
+\---
+
+
+
+# Severity Classification
+
+
+
+## 9. Analytical Severity Categories
+
+
+
+To make casualty impact easier to analyze and visualize, firearm incidents were classified into severity categories.
+
+
+
+The final analytical model produced:
+
+
+
+| Severity | Incidents |
+
+|---|---:|
+
+| Critical | 183 |
+
+| High | 201 |
+
+| Low | 986 |
+
+| No Casualties | 348 |
+
+| \*\*Total\*\* | \*\*1,718\*\* |
+
+
+
+The categories provide a practical analytical dimension for Power BI visualization and comparison.
+
+
+
+The classification should be understood as an \*\*analytical framework created for this project\*\*, not as an official government or law-enforcement threat classification system.
+
+
+
+\---
+
+
+
+## 10. High-Severity Firearm Incidents
+
+
+
+Using a threshold of \*\*5 or more total casualties\*\*, the analysis identified:
+
+
+
+\*\*384 high-severity firearm incidents\*\*
+
+
+
+The target distribution was:
+
+
+
+| Target Type | High-Severity Incidents |
+
+|---|---:|
+
+| Private Citizens \& Property | 154 |
+
+| Military | 111 |
+
+| Police | 43 |
+
+| Government (General) | 22 |
+
+| Business | 16 |
+
+| Transportation | 8 |
+
+| Diplomatic | 6 |
+
+| NGO | 3 |
+
+| Religious Institutions | 3 |
+
+| Journalists \& Media | 2 |
+
+| Airports | 1 |
+
+
+
+Private citizens/property and military targets represented the largest groups within this high-severity subset.
+
+
+
+\---
+
+
+
+## 11. Weapon Subtypes in High-Severity Incidents
+
+
+
+For the 384 high-severity firearm incidents:
+
+
+
+| Firearm Subtype | Incidents |
+
+|---|---:|
+
+| Unknown Gun Type | 320 |
+
+| Automatic / Semi-Automatic Rifle | 49 |
+
+| Rifle / Shotgun | 9 |
+
+| Handgun | 5 |
+
+| Other | 1 |
+
+
+
+A major limitation is immediately visible:
+
+
+
+\*\*320 of the 384 high-severity incidents were recorded with an unknown gun subtype.\*\*
+
+
+
+Therefore, the available data does not support strong conclusions about the specific firearm subtype used across most high-severity incidents.
+
+
+
+This is an important example of why missing or incomplete data should be reported rather than replaced with assumptions.
+
+
+
+\---
+
+
+
+# Physical Security Analysis
+
+
+
+## 12. Security-Relevant Firearm Incidents
+
+
+
+The project also created a security-relevant analytical subset based on target environments considered particularly relevant to physical-security analysis.
+
+
+
+Results:
+
+
+
+\- \*\*1,629 security-relevant firearm incidents\*\*
+
+\- \*\*89 firearm incidents outside the selected security-relevant scope\*\*
+
+\- \*\*367 high-severity security-relevant incidents\*\*
+
+
+
+This subset allows the project to move beyond general violent-event statistics and examine incidents from an operational-security perspective.
+
+
+
+The classification represents the analytical scope of this project and should not be interpreted as an official security or government classification.
+
+
+
+\---
+
+
+
+# Geographic Analysis
+
+
+
+## 13. Geographic Mapping
+
+
+
+Latitude and longitude fields were used to visualize incidents geographically in Power BI.
+
+
+
+The maps provide a useful method for identifying geographic concentrations and comparing incidents across locations.
+
+
+
+However, geographic visualization introduced an important data-quality limitation.
+
+
+
+\---
+
+
+
+## 14. Missing Geographic Coordinates
+
+
+
+During data validation, \*\*39 records were identified with missing latitude and/or longitude information\*\*.
+
+
+
+These records represent legitimate incidents and therefore remain part of the appropriate incident counts and analytical totals.
+
+
+
+However, without reliable geographic coordinates, they cannot be accurately displayed as individual points on the Power BI map.
+
+
+
+They were therefore:
+
+
+
+\- retained in the analytical dataset where appropriate;
+
+\- included in incident counts and non-geographic analysis;
+
+\- excluded from map-point visualization when coordinates were unavailable.
+
+
+
+Removing the incidents completely would artificially reduce the number of documented events.
+
+
+
+At the same time, inventing or estimating coordinates without sufficient supporting evidence could create false geographic precision.
+
+
+
+The project therefore preserves the distinction between:
+
+
+
+\*\*an incident being known to have occurred\*\*
+
+
+
+and
+
+
+
+\*\*the exact geographic coordinates of that incident being known.\*\*
+
+
+
+\---
+
+
+
+# Data Quality Findings
+
+
+
+## 15. Data Quality as Part of the Analysis
+
+
+
+Data cleaning was not treated as an exercise in making every field complete.
+
+
+
+Instead, questionable and incomplete records were evaluated according to whether sufficient evidence existed to modify them.
+
+
+
+The project followed several principles:
+
+
+
+1\. Missing data does not automatically mean an invalid record.
+
+2\. Repeated records should not automatically be classified as duplicates without examining the event information.
+
+3\. Missing geographic coordinates should not be invented simply to populate a map.
+
+4\. Unknown weapon information should remain unknown when the source data does not support a more specific classification.
+
+5\. Analytical limitations should be communicated alongside findings.
+
+
+
+This approach preserves the distinction between \*\*observed information, analytical interpretation, and unsupported assumptions\*\*.
+
+
+
+\---
+
+
+
+# Analytical Interpretation
+
+
+
+## 16. Incident Frequency vs. Incident Severity
+
+
+
+One of the most important analytical lessons from the project is that frequency and severity answer different questions.
+
+
+
+Incident frequency identifies where violent events occur most often.
+
+
+
+Severity analysis identifies where incidents produce greater human consequences.
+
+
+
+For physical-security analysis, both dimensions matter.
+
+
+
+A target environment with many low-casualty incidents presents a different security problem from an environment with fewer incidents but substantially higher casualty outcomes.
+
+
+
+\---
+
+
+
+## 17. Target Environment
+
+
+
+Private Citizens \& Property represented the largest firearm target category in the analyzed data.
+
+
+
+Military, police, and government targets also represented substantial portions of firearm incidents.
+
+
+
+These findings can help frame additional security questions, but the data alone does not establish why a particular target was selected or whether a specific security measure would have prevented an incident.
+
+
+
+Those questions would require additional variables describing factors such as:
+
+
+
+\- access control;
+
+\- security staffing;
+
+\- protective barriers;
+
+\- surveillance;
+
+\- response times;
+
+\- attacker planning;
+
+\- facility design;
+
+\- prior threats;
+
+\- security procedures.
+
+
+
+\---
+
+
+
+## 18. Correlation vs. Causation
+
+
+
+The analysis identifies patterns and associations within the available data.
+
+
+
+It does \*\*not\*\* establish that a particular target characteristic, weapon type, geographic location, or security condition caused an incident.
+
+
+
+For example, a higher number of incidents involving a particular target category does not by itself demonstrate that those locations had weaker security.
+
+
+
+Additional evidence would be necessary before making that conclusion.
+
+
+
+This distinction is particularly important when translating descriptive analysis into security recommendations.
+
+
+
+\---
+
+
+
+# Limitations
+
+
+
+## 19. Analytical Limitations
+
+
+
+Several limitations should be considered when interpreting the project:
+
+
+
+\- The datasets represent specific reporting periods and should not automatically be interpreted as current incident conditions.
+
+\- Missing geographic coordinates affect map completeness.
+
+\- Many firearm records do not identify a specific firearm subtype.
+
+\- Different source datasets may use different definitions and collection methodologies.
+
+\- Casualty totals measure consequences but do not independently measure the effectiveness of security controls.
+
+\- Target categories are broad and may contain very different environments.
+
+\- The available data does not contain every variable necessary to determine why an incident occurred.
+
+\- Observed relationships should not automatically be interpreted as causal relationships.
+
+
+
+These limitations do not make the dataset unusable. Instead, they define what conclusions the evidence can reasonably support.
+
+
+
+\---
+
+
+
+# Conclusion
+
+
+
+This project demonstrates how violent-event data can be transformed from raw incident records into a structured analytical model for examining firearm incidents, casualty severity, target environments, attack methods, and geographic patterns.
+
+
+
+The analysis identified \*\*1,718 firearm incidents\*\*, including \*\*384 incidents with five or more total casualties\*\*. The analytical security filter identified \*\*1,629 security-relevant firearm incidents\*\*, including \*\*367 high-severity incidents\*\*.
+
+
+
+The project also demonstrated that data-quality findings are themselves analytically important. Missing coordinates, unknown firearm subtypes, and incomplete contextual information directly affect what questions can responsibly be answered.
+
+
+
+Rather than hiding these limitations, they are documented as part of the final analysis.
+
+
+
+The technical implementation—including Python preprocessing, validation, AWS S3, Snowflake, dbt, SQL modeling, and Power BI—is documented separately in:
+
+
+
+## \[Technical Documentation → readme\_tech.md](readme\_tech.md)
+
+
+
+The main project landing page is available here:
+
+
+
+## \[← Return to README](README.md)
+
+
+

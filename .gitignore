@@ -9,3 +9,39 @@ logs/
 *.pem
 *.key
 *.pub
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables / credentials
+.env
+.env.*
+*.pem
+*.key
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# dbt generated folders
+target/
+dbt_packages/
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+# Original third-party source datasets
+globalterrorismdb_2021Jan-June_1222dist.xlsx
+Violence Project - MASS SHOOTER DATABASE 2026 - Version 10.xlsx
