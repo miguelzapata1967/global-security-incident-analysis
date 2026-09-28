@@ -14,11 +14,11 @@ The objective was not simply to count incidents. The analysis examined firearm-r
 
 
 
-The technical implementation is documented separately in \[`readme\_tech.md`](readme\_tech.md).
+The technical implementation is documented separately in [`readme_tech.md`](readme_tech.md).
 
 
 
-\---
+---
 
 
 
@@ -30,7 +30,7 @@ The Global Terrorism Database (GTD) dataset analyzed for this project contained:
 
 
 
-\*\*4,960 incidents\*\*
+**4,960 incidents**
 
 
 
@@ -38,7 +38,7 @@ The analysis first examined the overall distribution of attack types, targets, a
 
 
 
-\---
+---
 
 
 
@@ -80,7 +80,7 @@ However, because this project focuses heavily on mass-shooting and physical-secu
 
 
 
-\---
+---
 
 
 
@@ -96,7 +96,7 @@ The most frequently recorded target categories in the complete dataset included:
 
 |---|---:|
 
-| Private Citizens \& Property | 1,502 |
+| Private Citizens & Property | 1,502 |
 
 | Military | 1,161 |
 
@@ -118,7 +118,7 @@ The most frequently recorded target categories in the complete dataset included:
 
 | Transportation | 68 |
 
-| Journalists \& Media | 49 |
+| Journalists & Media | 49 |
 
 | Diplomatic | 36 |
 
@@ -144,7 +144,7 @@ Private citizens/property, military, police, and government targets represented 
 
 
 
-\---
+---
 
 
 
@@ -184,7 +184,7 @@ Firearms were the second most frequently recorded weapon category, with:
 
 
 
-\*\*1,718 firearm-related incidents\*\*
+**1,718 firearm-related incidents**
 
 
 
@@ -192,7 +192,7 @@ These incidents became a primary analytical subset for the project.
 
 
 
-\---
+---
 
 
 
@@ -230,7 +230,7 @@ Armed assault represented the dominant attack type among firearm-related inciden
 
 
 
-\---
+---
 
 
 
@@ -246,7 +246,7 @@ The firearm subset showed the following target distribution:
 
 |---|---:|
 
-| Private Citizens \& Property | 628 |
+| Private Citizens & Property | 628 |
 
 | Military | 297 |
 
@@ -260,7 +260,7 @@ The firearm subset showed the following target distribution:
 
 | Religious Institutions | 28 |
 
-| Journalists \& Media | 26 |
+| Journalists & Media | 26 |
 
 | Education | 23 |
 
@@ -288,7 +288,7 @@ The firearm subset showed the following target distribution:
 
 
 
-The largest firearm target category was \*\*Private Citizens \& Property\*\*, followed by Military, Police, and Government targets.
+The largest firearm target category was **Private Citizens & Property**, followed by Military, Police, and Government targets.
 
 
 
@@ -296,7 +296,7 @@ This distribution demonstrates why target environment is important when analyzin
 
 
 
-\---
+---
 
 
 
@@ -334,7 +334,7 @@ Therefore, incident count alone does not fully describe incident severity.
 
 
 
-\---
+---
 
 
 
@@ -368,7 +368,7 @@ An environment may experience relatively fewer incidents but still face signific
 
 
 
-\---
+---
 
 
 
@@ -400,7 +400,7 @@ The final analytical model produced:
 
 | No Casualties | 348 |
 
-| \*\*Total\*\* | \*\*1,718\*\* |
+| **Total** | **1,718** |
 
 
 
@@ -408,11 +408,11 @@ The categories provide a practical analytical dimension for Power BI visualizati
 
 
 
-The classification should be understood as an \*\*analytical framework created for this project\*\*, not as an official government or law-enforcement threat classification system.
+The classification should be understood as an **analytical framework created for this project**, not as an official government or law-enforcement threat classification system.
 
 
 
-\---
+---
 
 
 
@@ -420,11 +420,11 @@ The classification should be understood as an \*\*analytical framework created f
 
 
 
-Using a threshold of \*\*5 or more total casualties\*\*, the analysis identified:
+Using a threshold of **5 or more total casualties**, the analysis identified:
 
 
 
-\*\*384 high-severity firearm incidents\*\*
+**384 high-severity firearm incidents**
 
 
 
@@ -436,7 +436,7 @@ The target distribution was:
 
 |---|---:|
 
-| Private Citizens \& Property | 154 |
+| Private Citizens & Property | 154 |
 
 | Military | 111 |
 
@@ -454,7 +454,7 @@ The target distribution was:
 
 | Religious Institutions | 3 |
 
-| Journalists \& Media | 2 |
+| Journalists & Media | 2 |
 
 | Airports | 1 |
 
@@ -464,7 +464,7 @@ Private citizens/property and military targets represented the largest groups wi
 
 
 
-\---
+---
 
 
 
@@ -496,7 +496,7 @@ A major limitation is immediately visible:
 
 
 
-\*\*320 of the 384 high-severity incidents were recorded with an unknown gun subtype.\*\*
+**320 of the 384 high-severity incidents were recorded with an unknown gun subtype.**
 
 
 
@@ -508,7 +508,7 @@ This is an important example of why missing or incomplete data should be reporte
 
 
 
-\---
+---
 
 
 
@@ -528,11 +528,11 @@ Results:
 
 
 
-\- \*\*1,629 security-relevant firearm incidents\*\*
+- **1,629 security-relevant firearm incidents**
 
-\- \*\*89 firearm incidents outside the selected security-relevant scope\*\*
+- **89 firearm incidents outside the selected security-relevant scope**
 
-\- \*\*367 high-severity security-relevant incidents\*\*
+- **367 high-severity security-relevant incidents**
 
 
 
@@ -544,7 +544,7 @@ The classification represents the analytical scope of this project and should no
 
 
 
-\---
+---
 
 
 
@@ -568,7 +568,7 @@ However, geographic visualization introduced an important data-quality limitatio
 
 
 
-\---
+---
 
 
 
@@ -576,7 +576,7 @@ However, geographic visualization introduced an important data-quality limitatio
 
 
 
-During data validation, \*\*39 records were identified with missing latitude and/or longitude information\*\*.
+During data validation, **39 records were identified with missing latitude and/or longitude information**.
 
 
 
@@ -592,11 +592,11 @@ They were therefore:
 
 
 
-\- retained in the analytical dataset where appropriate;
+- retained in the analytical dataset where appropriate;
 
-\- included in incident counts and non-geographic analysis;
+- included in incident counts and non-geographic analysis;
 
-\- excluded from map-point visualization when coordinates were unavailable.
+- excluded from map-point visualization when coordinates were unavailable.
 
 
 
@@ -612,7 +612,7 @@ The project therefore preserves the distinction between:
 
 
 
-\*\*an incident being known to have occurred\*\*
+**an incident being known to have occurred**
 
 
 
@@ -620,11 +620,11 @@ and
 
 
 
-\*\*the exact geographic coordinates of that incident being known.\*\*
+**the exact geographic coordinates of that incident being known.**
 
 
 
-\---
+---
 
 
 
@@ -660,11 +660,11 @@ The project followed several principles:
 
 
 
-This approach preserves the distinction between \*\*observed information, analytical interpretation, and unsupported assumptions\*\*.
+This approach preserves the distinction between **observed information, analytical interpretation, and unsupported assumptions**.
 
 
 
-\---
+---
 
 
 
@@ -696,7 +696,7 @@ A target environment with many low-casualty incidents presents a different secur
 
 
 
-\---
+---
 
 
 
@@ -704,7 +704,7 @@ A target environment with many low-casualty incidents presents a different secur
 
 
 
-Private Citizens \& Property represented the largest firearm target category in the analyzed data.
+Private Citizens & Property represented the largest firearm target category in the analyzed data.
 
 
 
@@ -720,27 +720,27 @@ Those questions would require additional variables describing factors such as:
 
 
 
-\- access control;
+- access control;
 
-\- security staffing;
+- security staffing;
 
-\- protective barriers;
+- protective barriers;
 
-\- surveillance;
+- surveillance;
 
-\- response times;
+- response times;
 
-\- attacker planning;
+- attacker planning;
 
-\- facility design;
+- facility design;
 
-\- prior threats;
+- prior threats;
 
-\- security procedures.
+- security procedures.
 
 
 
-\---
+---
 
 
 
@@ -752,7 +752,7 @@ The analysis identifies patterns and associations within the available data.
 
 
 
-It does \*\*not\*\* establish that a particular target characteristic, weapon type, geographic location, or security condition caused an incident.
+It does **not** establish that a particular target characteristic, weapon type, geographic location, or security condition caused an incident.
 
 
 
@@ -768,7 +768,7 @@ This distinction is particularly important when translating descriptive analysis
 
 
 
-\---
+---
 
 
 
@@ -784,21 +784,21 @@ Several limitations should be considered when interpreting the project:
 
 
 
-\- The datasets represent specific reporting periods and should not automatically be interpreted as current incident conditions.
+- The datasets represent specific reporting periods and should not automatically be interpreted as current incident conditions.
 
-\- Missing geographic coordinates affect map completeness.
+- Missing geographic coordinates affect map completeness.
 
-\- Many firearm records do not identify a specific firearm subtype.
+- Many firearm records do not identify a specific firearm subtype.
 
-\- Different source datasets may use different definitions and collection methodologies.
+- Different source datasets may use different definitions and collection methodologies.
 
-\- Casualty totals measure consequences but do not independently measure the effectiveness of security controls.
+- Casualty totals measure consequences but do not independently measure the effectiveness of security controls.
 
-\- Target categories are broad and may contain very different environments.
+- Target categories are broad and may contain very different environments.
 
-\- The available data does not contain every variable necessary to determine why an incident occurred.
+- The available data does not contain every variable necessary to determine why an incident occurred.
 
-\- Observed relationships should not automatically be interpreted as causal relationships.
+- Observed relationships should not automatically be interpreted as causal relationships.
 
 
 
@@ -806,7 +806,7 @@ These limitations do not make the dataset unusable. Instead, they define what co
 
 
 
-\---
+---
 
 
 
@@ -818,7 +818,7 @@ This project demonstrates how violent-event data can be transformed from raw inc
 
 
 
-The analysis identified \*\*1,718 firearm incidents\*\*, including \*\*384 incidents with five or more total casualties\*\*. The analytical security filter identified \*\*1,629 security-relevant firearm incidents\*\*, including \*\*367 high-severity incidents\*\*.
+The analysis identified **1,718 firearm incidents**, including **384 incidents with five or more total casualties**. The analytical security filter identified **1,629 security-relevant firearm incidents**, including **367 high-severity incidents**.
 
 
 
@@ -834,7 +834,7 @@ The technical implementation—including Python preprocessing, validation, AWS S
 
 
 
-## \[Technical Documentation → readme\_tech.md](readme\_tech.md)
+## [Technical Documentation → readme_tech.md](readme_tech.md)
 
 
 
@@ -842,7 +842,8 @@ The main project landing page is available here:
 
 
 
-## \[← Return to README](README.md)
+## [← Return to README](README.md)
+
 
 
 

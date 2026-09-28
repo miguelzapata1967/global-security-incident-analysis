@@ -24,11 +24,11 @@ Python / Pandas
 
 &#x20;      ↓
 
-Data Inspection \& Validation
+Data Inspection & Validation
 
 &#x20;      ↓
 
-Data Cleaning \& Transformation
+Data Cleaning & Transformation
 
 &#x20;      ↓
 
@@ -48,7 +48,7 @@ dbt
 
 &#x20;      ↓
 
-Staging \& Fact Models
+Staging & Fact Models
 
 &#x20;      ↓
 
@@ -66,11 +66,11 @@ The analytical findings and interpretation are documented separately in:
 
 
 
-\[readme\_analysis.md](readme\_analysis.md)
+[readme_analysis.md](readme_analysis.md)
 
 
 
-\---
+---
 
 
 
@@ -82,25 +82,25 @@ The project uses:
 
 
 
-\- Python
+- Python
 
-\- Pandas
+- Pandas
 
-\- CSV / Excel
+- CSV / Excel
 
-\- AWS S3
+- AWS S3
 
-\- Snowflake
+- Snowflake
 
-\- SQL
+- SQL
 
-\- dbt
+- dbt
 
-\- Power BI
+- Power BI
 
-\- Git
+- Git
 
-\- GitHub
+- GitHub
 
 
 
@@ -108,7 +108,7 @@ Each technology performs a specific part of the analytical workflow.
 
 
 
-\---
+---
 
 
 
@@ -120,27 +120,27 @@ The project uses violent-event and mass-shooting datasets containing information
 
 
 
-\- incident date;
+- incident date;
 
-\- country;
+- country;
 
-\- geographic location;
+- geographic location;
 
-\- latitude and longitude;
+- latitude and longitude;
 
-\- attack type;
+- attack type;
 
-\- target type;
+- target type;
 
-\- weapon type;
+- weapon type;
 
-\- firearm subtype;
+- firearm subtype;
 
-\- fatalities;
+- fatalities;
 
-\- injuries;
+- injuries;
 
-\- incident characteristics.
+- incident characteristics.
 
 
 
@@ -152,7 +152,7 @@ This allows the transformation process to remain traceable and reproducible.
 
 
 
-\---
+---
 
 
 
@@ -168,7 +168,7 @@ Primary inspection script:
 
 
 
-`python\_01\_inspect\_data.py`
+`python_01_inspect_data.py`
 
 
 
@@ -176,25 +176,25 @@ The inspection process examined:
 
 
 
-\- dataset dimensions;
+- dataset dimensions;
 
-\- column names;
+- column names;
 
-\- data types;
+- data types;
 
-\- missing values;
+- missing values;
 
-\- potential duplicates;
+- potential duplicates;
 
-\- geographic fields;
+- geographic fields;
 
-\- attack categories;
+- attack categories;
 
-\- target categories;
+- target categories;
 
-\- weapon categories;
+- weapon categories;
 
-\- casualty fields.
+- casualty fields.
 
 
 
@@ -202,7 +202,7 @@ The objective was to understand the structure and limitations of the data before
 
 
 
-\---
+---
 
 
 
@@ -214,7 +214,7 @@ The script:
 
 
 
-`01\_create\_analytical\_dataset.py`
+`01_create_analytical_dataset.py`
 
 
 
@@ -230,17 +230,17 @@ The transformation process focused on retaining fields relevant to:
 
 
 
-\- firearm incidents;
+- firearm incidents;
 
-\- casualty analysis;
+- casualty analysis;
 
-\- physical-security targets;
+- physical-security targets;
 
-\- geographic analysis;
+- geographic analysis;
 
-\- attack classification;
+- attack classification;
 
-\- weapon classification.
+- weapon classification.
 
 
 
@@ -248,7 +248,7 @@ The resulting analytical dataset could then be validated independently from the 
 
 
 
-\---
+---
 
 
 
@@ -260,7 +260,7 @@ Data quality was examined using:
 
 
 
-`02\_gtd\_data\_quality.py`
+`02_gtd_data_quality.py`
 
 
 
@@ -268,7 +268,7 @@ Additional validation was performed using:
 
 
 
-`02\_validate\_firearm\_dataset.py`
+`02_validate_firearm_dataset.py`
 
 
 
@@ -276,19 +276,19 @@ The validation process examined issues such as:
 
 
 
-\- null values;
+- null values;
 
-\- missing geographic coordinates;
+- missing geographic coordinates;
 
-\- casualty fields;
+- casualty fields;
 
-\- firearm classifications;
+- firearm classifications;
 
-\- unexpected values;
+- unexpected values;
 
-\- analytical record counts;
+- analytical record counts;
 
-\- possible duplicate records.
+- possible duplicate records.
 
 
 
@@ -300,7 +300,7 @@ Instead, records were evaluated before determining whether they should be transf
 
 
 
-\---
+---
 
 
 
@@ -312,7 +312,7 @@ The script:
 
 
 
-`03\_gtd\_analytical\_scope.py`
+`03_gtd_analytical_scope.py`
 
 
 
@@ -328,7 +328,7 @@ One of the primary subsets contained:
 
 
 
-\*\*1,718 firearm-related incidents\*\*
+**1,718 firearm-related incidents**
 
 
 
@@ -336,7 +336,7 @@ A security-relevant analytical filter subsequently identified:
 
 
 
-\*\*1,629 security-relevant firearm incidents\*\*
+**1,629 security-relevant firearm incidents**
 
 
 
@@ -344,7 +344,7 @@ The filtering logic allowed the project to focus on target environments relevant
 
 
 
-\---
+---
 
 
 
@@ -356,7 +356,7 @@ The script:
 
 
 
-`04\_gtd\_clean\_data.py`
+`04_gtd_clean_data.py`
 
 
 
@@ -368,7 +368,7 @@ The resulting cleaned dataset is stored as:
 
 
 
-`gtd\_cleaned.csv`
+`gtd_cleaned.csv`
 
 
 
@@ -376,15 +376,15 @@ Supporting analytical datasets include:
 
 
 
-`gtd\_analytical\_scope.csv`
+`gtd_analytical_scope.csv`
 
 
 
-`firearm\_security\_incidents.csv`
+`firearm_security_incidents.csv`
 
 
 
-`gtd\_data\_quality\_report.csv`
+`gtd_data_quality_report.csv`
 
 
 
@@ -392,7 +392,7 @@ These files provide intermediate and final analytical outputs generated during t
 
 
 
-\---
+---
 
 
 
@@ -404,7 +404,7 @@ Latitude and longitude were important fields because the final Power BI dashboar
 
 
 
-During validation, \*\*39 records were identified with missing latitude and/or longitude information\*\*.
+During validation, **39 records were identified with missing latitude and/or longitude information**.
 
 
 
@@ -416,15 +416,15 @@ They represent documented incidents that may remain valid for:
 
 
 
-\- incident counts;
+- incident counts;
 
-\- casualty analysis;
+- casualty analysis;
 
-\- attack-type analysis;
+- attack-type analysis;
 
-\- target analysis;
+- target analysis;
 
-\- weapon analysis.
+- weapon analysis.
 
 
 
@@ -460,7 +460,7 @@ This prevents map requirements from changing the underlying incident totals.
 
 
 
-\---
+---
 
 
 
@@ -512,7 +512,7 @@ Snowflake
 
 
 
-\---
+---
 
 
 
@@ -528,7 +528,7 @@ Primary database:
 
 
 
-`GTD\_SECURITY`
+`GTD_SECURITY`
 
 
 
@@ -548,7 +548,7 @@ and
 
 
 
-`dbt\_mzapata`
+`dbt_mzapata`
 
 
 
@@ -556,11 +556,11 @@ The Snowflake warehouse used during development was:
 
 
 
-`COMPUTE\_WH`
+`COMPUTE_WH`
 
 
 
-\---
+---
 
 
 
@@ -576,7 +576,7 @@ One of the primary analytical files loaded was:
 
 
 
-`firearm\_security\_incidents.csv`
+`firearm_security_incidents.csv`
 
 
 
@@ -584,7 +584,7 @@ The loaded firearm analytical dataset contained:
 
 
 
-\*\*1,718 records\*\*
+**1,718 records**
 
 
 
@@ -592,7 +592,7 @@ The RAW layer preserves the ingested data before downstream dbt transformations.
 
 
 
-\---
+---
 
 
 
@@ -614,7 +614,7 @@ One relevant configuration was:
 
 ```sql
 
-ERROR\_ON\_COLUMN\_COUNT\_MISMATCH = FALSE
+ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE
 
 ```
 
@@ -628,7 +628,7 @@ This setting should not be interpreted as ignoring data-quality problems. Valida
 
 
 
-\---
+---
 
 
 
@@ -644,7 +644,7 @@ The local dbt project was configured with:
 
 
 
-`my\_snowflake\_project`
+`my_snowflake_project`
 
 
 
@@ -652,7 +652,7 @@ The dbt target schema was:
 
 
 
-`dbt\_mzapata`
+`dbt_mzapata`
 
 
 
@@ -660,7 +660,7 @@ dbt was used to separate staging logic from final analytical models.
 
 
 
-\---
+---
 
 
 
@@ -672,7 +672,7 @@ Primary dbt sources included:
 
 
 
-`gtd\_raw`
+`gtd_raw`
 
 
 
@@ -680,7 +680,7 @@ and
 
 
 
-`firearm\_security\_incidents`
+`firearm_security_incidents`
 
 
 
@@ -688,7 +688,7 @@ These sources provided the starting point for downstream staging and fact models
 
 
 
-\---
+---
 
 
 
@@ -700,19 +700,19 @@ The project created staging views including:
 
 
 
-`stg\_gtd\_events`
+`stg_gtd_events`
 
 
 
-`stg\_gtd\_attacks`
+`stg_gtd_attacks`
 
 
 
-`stg\_gtd\_casualties`
+`stg_gtd_casualties`
 
 
 
-`stg\_gtd\_security`
+`stg_gtd_security`
 
 
 
@@ -724,7 +724,7 @@ This design prevents Power BI from depending directly on raw ingestion tables.
 
 
 
-\---
+---
 
 
 
@@ -736,7 +736,7 @@ Final analytical models included:
 
 
 
-`fct\_gtd\_incidents`
+`fct_gtd_incidents`
 
 
 
@@ -744,7 +744,7 @@ and
 
 
 
-`fct\_security\_incidents`
+`fct_security_incidents`
 
 
 
@@ -776,7 +776,7 @@ POWER BI
 
 
 
-\---
+---
 
 
 
@@ -812,7 +812,7 @@ during project development.
 
 
 
-\---
+---
 
 
 
@@ -840,7 +840,7 @@ The final Snowflake analytical model produced:
 
 | No Casualties | 348 |
 
-| \*\*Total\*\* | \*\*1,718\*\* |
+| **Total** | **1,718** |
 
 
 
@@ -852,7 +852,7 @@ This severity system is specific to this portfolio analysis and is not presented
 
 
 
-\---
+---
 
 
 
@@ -868,7 +868,7 @@ For example, the firearm dataset contained:
 
 
 
-\*\*1,718 records\*\*
+**1,718 records**
 
 
 
@@ -876,7 +876,7 @@ and the final severity classification also totaled:
 
 
 
-\*\*1,718 records\*\*
+**1,718 records**
 
 
 
@@ -888,7 +888,7 @@ Validation between pipeline stages is an important part of the project because a
 
 
 
-\---
+---
 
 
 
@@ -920,27 +920,27 @@ The dashboard includes analysis of:
 
 
 
-\- global violent incidents;
+- global violent incidents;
 
-\- domestic violent incidents;
+- domestic violent incidents;
 
-\- geographic distribution;
+- geographic distribution;
 
-\- target categories;
+- target categories;
 
-\- security-relevant incidents;
+- security-relevant incidents;
 
-\- weapons;
+- weapons;
 
-\- attack methods;
+- attack methods;
 
-\- severity;
+- severity;
 
-\- summary trends.
+- summary trends.
 
 
 
-\---
+---
 
 
 
@@ -984,7 +984,7 @@ These images are displayed directly from the main `README.md`.
 
 
 
-\---
+---
 
 
 
@@ -998,41 +998,41 @@ The local project contains the following major components:
 
 ```text
 
-Active\_Shooter\_Global\_Terrorism/
+Active_Shooter_Global_Terrorism/
 
 │
 
 ├── README.md
 
-├── readme\_analysis.md
+├── readme_analysis.md
 
-├── readme\_tech.md
+├── readme_tech.md
 
 ├── .gitignore
 
 │
 
-├── python\_01\_inspect\_data.py
+├── python_01_inspect_data.py
 
-├── 01\_create\_analytical\_dataset.py
+├── 01_create_analytical_dataset.py
 
-├── 02\_gtd\_data\_quality.py
+├── 02_gtd_data_quality.py
 
-├── 02\_validate\_firearm\_dataset.py
+├── 02_validate_firearm_dataset.py
 
-├── 03\_gtd\_analytical\_scope.py
+├── 03_gtd_analytical_scope.py
 
-├── 04\_gtd\_clean\_data.py
+├── 04_gtd_clean_data.py
 
 │
 
-├── firearm\_security\_incidents.csv
+├── firearm_security_incidents.csv
 
-├── gtd\_analytical\_scope.csv
+├── gtd_analytical_scope.csv
 
-├── gtd\_cleaned.csv
+├── gtd_cleaned.csv
 
-├── gtd\_data\_quality\_report.csv
+├── gtd_data_quality_report.csv
 
 │
 
@@ -1058,7 +1058,7 @@ Active\_Shooter\_Global\_Terrorism/
 
 
 
-\---
+---
 
 
 
@@ -1078,17 +1078,17 @@ Examples include:
 
 .env
 
-\*.pem
+*.pem
 
-\*.key
+*.key
 
-\_\_pycache\_\_/
+__pycache__/
 
 .venv/
 
 target/
 
-dbt\_packages/
+dbt_packages/
 
 logs/
 
@@ -1100,7 +1100,7 @@ Credentials and private authentication keys should never be committed to the rep
 
 
 
-\---
+---
 
 
 
@@ -1168,7 +1168,7 @@ The underlying validation and transformation decisions determine whether the das
 
 
 
-\---
+---
 
 
 
@@ -1228,7 +1228,7 @@ Technical limitations should be communicated to the analyst and ultimately to th
 
 
 
-\---
+---
 
 
 
@@ -1252,7 +1252,7 @@ For the detailed findings and interpretation:
 
 
 
-## \[← Analysis \& Findings](readme\_analysis.md)
+## [← Analysis & Findings](readme_analysis.md)
 
 
 
@@ -1260,7 +1260,8 @@ For the main portfolio page:
 
 
 
-## \[← Project README](README.md)
+## [← Project README](README.md)
+
 
 
 

@@ -1,8 +1,8 @@
-\# Mass Shooting Incident Severity and Physical Security Analysis
+# Mass Shooting Incident Severity and Physical Security Analysis
 
 
 
-\## Project Overview
+## Project Overview
 
 
 
@@ -18,17 +18,17 @@ Rather than looking only at incident counts, the analysis focuses on questions r
 
 
 
-\- Which targets experience the greatest number of firearm-related incidents?
+- Which targets experience the greatest number of firearm-related incidents?
 
-\- Which incidents produce the highest casualty levels?
+- Which incidents produce the highest casualty levels?
 
-\- What attack methods and weapons appear most frequently?
+- What attack methods and weapons appear most frequently?
 
-\- Which target environments show elevated security exposure?
+- Which target environments show elevated security exposure?
 
-\- How are incidents geographically distributed?
+- How are incidents geographically distributed?
 
-\- What data-quality limitations affect geographic analysis and mapping?
+- What data-quality limitations affect geographic analysis and mapping?
 
 
 
@@ -36,11 +36,11 @@ The project follows an end-to-end analytical workflow using Python, SQL, Snowfla
 
 
 
-\---
+---
 
 
 
-\## Analytical Workflow
+## Analytical Workflow
 
 
 
@@ -48,63 +48,63 @@ The project follows an end-to-end analytical workflow using Python, SQL, Snowfla
 
 Source Data
 
-&#x20;   ↓
+   ↓
 
 Python / Pandas
 
-&#x20;   ↓
+   ↓
 
 Data Quality Validation
 
-&#x20;   ↓
+   ↓
 
-Data Cleaning \& Transformation
+Data Cleaning & Transformation
 
-&#x20;   ↓
+   ↓
 
 AWS S3
 
-&#x20;   ↓
+   ↓
 
 Snowflake
 
-&#x20;   ↓
+   ↓
 
 dbt
 
-&#x20;   ↓
+   ↓
 
 Analytical Models
 
-&#x20;   ↓
+   ↓
 
 Power BI
 
-&#x20;   ↓
+   ↓
 
-Security \& Business Insights
+Security & Business Insights
 
 
 
 Technologies Used
 
-\- Python
+- Python
 
-\- Pandas
+- Pandas
 
-\- SQL
+- SQL
 
-\- Snowflake
+- Snowflake
 
-\- dbt
+- dbt
 
-\- AWS S3
+- AWS S3
 
-\- Power BI
+- Power BI
 
-\- Git
+- Git
 
-\- GitHub
+- GitHub
 
 Data Sources
 
@@ -118,37 +118,37 @@ Key Analytical Areas
 
 The analysis examines:
 
-\- Firearm-related incidents
+- Firearm-related incidents
 
-\- Casualty severity
+- Casualty severity
 
-\- Target categories
+- Target categories
 
-\- Attack methods
+- Attack methods
 
-\- Weapon categories
+- Weapon categories
 
-\- Geographic distribution
+- Geographic distribution
 
-\- Security-relevant environments
+- Security-relevant environments
 
-\- Data-quality limitations
+- Data-quality limitations
 
-\- Missing geographic coordinates
+- Missing geographic coordinates
 
-\- Domestic and global violent-event patterns
+- Domestic and global violent-event patterns
 
 Incident Severity Classification
 
 Firearm incidents were classified into analytical severity categories based on casualty levels:
 
-\- Critical
+- Critical
 
-\- High
+- High
 
-\- Low
+- Low
 
-\- No Casualties
+- No Casualties
 
 This provides an additional analytical dimension beyond simply counting the number of incidents.
 
@@ -156,27 +156,27 @@ Dashboard Preview
 
 Global Violent Events
 
-&#x20;
+
 
 Domestic Violent Events
 
-&#x20;
+
 
 Security Incidents by Country
 
-&#x20;
+
 
 Security Incidents by Target
 
-&#x20;
+
 
 Weapons and Attack Methods
 
-&#x20;
+
 
 Summary Trends
 
-&#x20;
+
 
 Power BI Dashboard
 
@@ -206,7 +206,7 @@ Analysis and Findings
 
 See:
 
-\[readme\_analysis.md](readme\_analysis.md)
+[readme_analysis.md](readme_analysis.md)
 
 This document contains the detailed analytical findings, incident patterns, severity analysis, target analysis, firearm analysis, data-quality observations, limitations, and security interpretation.
 
@@ -214,7 +214,7 @@ Technical Implementation
 
 See:
 
-\[readme\_tech.md](readme\_tech.md)
+[readme_tech.md](readme_tech.md)
 
 This document explains the technical workflow, including Python preprocessing, data validation, transformations, AWS S3, Snowflake, dbt modeling, and Power BI.
 
@@ -222,17 +222,17 @@ Python Analysis Files
 
 The repository includes the Python scripts used throughout the project:
 
-\- python\_01\_inspect\_data.py
+- python_01_inspect_data.py
 
-\- 01\_create\_analytical\_dataset.py
+- 01_create_analytical_dataset.py
 
-\- 02\_gtd\_data\_quality.py
+- 02_gtd_data_quality.py
 
-\- 02\_validate\_firearm\_dataset.py
+- 02_validate_firearm_dataset.py
 
-\- 03\_gtd\_analytical\_scope.py
+- 03_gtd_analytical_scope.py
 
-\- 04\_gtd\_clean\_data.py
+- 04_gtd_clean_data.py
 
 These scripts document the progression from initial inspection and data-quality analysis through cleaning and creation of analytical datasets.
 
@@ -244,15 +244,15 @@ It demonstrates an analytical process that begins with questioning the reliabili
 
 My previous experience in law enforcement, investigations, and physical security influences this approach: examine the evidence, identify inconsistencies, document limitations, and avoid drawing conclusions that the available data cannot support.
 
-Active\_Shooter\_Global\_Terrorism/
+Active_Shooter_Global_Terrorism/
 
 │
 
 ├── README.md
 
-├── readme\_analysis.md
+├── readme_analysis.md
 
-├── readme\_tech.md
+├── readme_tech.md
 
 │
 
@@ -272,7 +272,11 @@ Author
 
 Miguel Angel Zapata
 
-Security Operations \& Investigations → Data Analytics
+Security Operations & Investigations → Data Analytics
 
 Python | SQL | Power BI | Snowflake | dbt | Data Analysis
+
+
+
+
 
